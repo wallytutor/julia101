@@ -429,6 +429,76 @@ julia> ST.mean(rand(1000))
 
 By the way, we used built-in random number generation in the above example.
 
+### Calling Python
+
+```julia-repl
+julia> using PythonCall
+    CondaPkg Found dependencies: D:\julia101\src\101\CondaPkg.toml
+    CondaPkg Found dependencies: D:\julia101\bin\julia-1.11.1-win64\depot\packages\PythonCall\Nr75f\CondaPkg.toml
+    CondaPkg Dependencies already up to date
+
+julia> ct = pyimport("cantera")
+Python: <module 'cantera' from 'D:\\julia101\\bin\\julia-1.11.1-win64\\CondaPkg\\Lib\\site-packages\\cantera\\__init__.py'>
+
+julia> gas = ct.Solution("gri30.yaml")
+Python: <cantera.composite.Solution object at 0x000001659DFC4510>
+
+julia> gas.TPX = 1000, ct.one_atm, "CH4: 1.0, O2: 2.0"
+(1000, <py 101325.0>, "CH4: 1.0, O2: 2.0")
+
+julia> gas.equilibrate("HP")
+Python: None
+
+julia> println(gas.report())
+
+  gri30:
+
+       temperature   3126.8 K
+          pressure   1.0132e+05 Pa
+           density   0.080809 kg/m^3
+  mean mol. weight   20.734 kg/kmol
+   phase of matter   gas
+
+                          1 kg             1 kmol     
+                     ---------------   ---------------
+          enthalpy        1.1826e+05        2.4519e+06  J
+   internal energy       -1.1356e+06       -2.3546e+07  J
+           entropy             13721         2.845e+05  J/K
+    Gibbs function       -4.2786e+07       -8.8711e+08  J
+ heat capacity c_p            2171.8             45029  J/K
+ heat capacity c_v            1770.8             36715  J/K
+
+                      mass frac. Y      mole frac. X     chem. pot. / RT
+                     ---------------   ---------------   ---------------
+                H2         0.0078306          0.080534           -23.513
+                 H         0.0031683          0.065169           -11.757
+                 O          0.039194          0.050793           -16.443
+                O2           0.13498          0.087465           -32.886
+                OH          0.085304             0.104             -28.2
+               H2O           0.30666           0.35294           -39.956
+               HO2        8.2121e-05        5.1586e-05           -44.643
+              H2O2        3.5871e-06        2.1865e-06           -56.399
+                 C        2.5216e-11        4.3529e-11           -18.927
+                CH        2.8497e-12        4.5383e-12           -30.684
+               CH2        1.5294e-12        2.2607e-12            -42.44
+            CH2(S)        1.6465e-13        2.4338e-13            -42.44
+               CH3         1.086e-12        1.4977e-12           -54.197
+               CH4         9.411e-14        1.2163e-13           -65.953
+                CO           0.22248           0.16468            -35.37
+               CO2           0.20029          0.094361           -51.813
+               HCO        1.0254e-06        7.3267e-07           -47.127
+              CH2O        7.9233e-09        5.4713e-09           -58.883
+             CH2OH        5.3103e-13        3.5478e-13            -70.64
+              HCCO        2.3319e-14        1.1784e-14           -66.054
+     [  +33 minor]        3.0931e-14        1.9711e-14
+```
+
+### Things to learn
+
+- Annotating types in functions
+- Defining structures and type-based dispatch
+- Flow control (loops, if-else statements, ...)
+
 ## Pluto environment
 
 Before going further, learn some Markdown! Please notice that Markdown has no standard and not all of GitHub's markdown works in Pluto (although most of it will be just fine). Here you find some recommendations:
