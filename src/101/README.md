@@ -440,6 +440,24 @@ For entering equations, Julia Markdown supports $\LaTeX$ typesetting; you can le
 
 Also notice that you can enter variable names in [Unicode](https://docs.julialang.org/en/v1/manual/unicode-input/). This helps keeping consistency between mathematical formulation and code, what is pretty interesting. Please do not use Unicode mixed with $\LaTeX$ (only Pluto supports that), otherwise you won't be able to copy your equations directly to reports. Partial support of autocompletion works in Pluto for Unicode, simply write a backslash and press tab, a list of available names will be shown.
 
+Generally speaking, you should follow its [documentation](https://plutojl.org/) to run Pluto. Here for keeping consistency and work in a portable environment we have provided the command `pluto()` that you can run from a `julia101` terminal.
+
+Your task:
+
+- Read [newton_cooling.dat](media/newton_cooling.dat) as a data frame
+- Clean data as required and establish a proper visualization
+- Propose a model to fit the data and identify a package to find its parameters
+
+Your tools:
+
+- [DataFrames](https://dataframes.juliadata.org/stable/)
+- [Makie](https://docs.makie.org/v0.21/)
+- What else do you need?
+
+Your goal:
+
+![Newton cooling](media/newton_cooling.png)
+
 ## Going further
 
 - [Julia Documentation](https://docs.julialang.org/en/v1/): in this page you find the whole documentation of Julia.
