@@ -73,3 +73,10 @@ Julia has its own [stylistic conventions](https://docs.julialang.org/en/v1/manua
 For [documenting code](https://docs.julialang.org/en/v1/manual/documentation/#Syntax-Guide) Julia has its own syntax which can be used to generate package documentation with help of [Documenter.jl](https://documenter.juliadocs.org/stable/)
 
 **Important:** Julia supports [Unicode input](https://docs.julialang.org/en/v1/manual/unicode-input/), but its use is highly discouraged in modules. Unicode characters are better suited to write application scripts such as notebooks (in Pluto or Jupyter).
+
+## Extensions
+
+After testing the launch of the environment, the following extensions are recommended for following this course (they are not shipped with the distribution if you received a zip container with the materials):
+
+- [Julia](https://github.com/julia-vscode/julia-vscode)
+- [Julia Color Themes](https://github.com/CameronBieganek/julia-color-themes)

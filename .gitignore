@@ -1,17 +1,27 @@
 ##############################################################################
-# LOCAL
+# EDITOR AND CONFIGS
 ##############################################################################
 
 # Editor.
 .vscode/
 
+# VSCode ignores.
+/bin/vscode-data/argv.json
+/bin/vscode-data/extensions/*
+/bin/vscode-data/user-data/*
+
+# User settings requires a few steps.
+!/bin/vscode-data/user-data/User/
+/bin/vscode-data/user-data/User/**/
+!/bin/vscode-data/user-data/User/settings.json
+
+##############################################################################
+# BINARIES AND OTHERS
+##############################################################################
+
 # Binaries of distributed software.
 /bin/julia*/
-/bin/vscode-data/
-/bin/VSCode-*/
-
-# Keep proposed user settings.
-!/bin/vscode-data/user-data/User/settings.json
+/bin/VSCode-win32-x64-*/
 
 # Software distributions.
 /dist/

@@ -1,0 +1,31 @@
+{
+    "update.mode": "none",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [72, 79],
+    "editor.tabSize": 4,
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 100,
+    "explorer.autoReveal": false,
+    "extensions.ignoreRecommendations": true,
+    "files.hotExit": "off",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "window.restoreWindows": "none",
+    "workbench.colorTheme": "Julia (Monokai Vibrant)",
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ff4081"
+    },
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 12,
+    "git.ignoreMissingGitWarning": true,
+
+    "[markdown]": {
+        "editor.wordWrap": "bounded", 
+        "editor.wordWrapColumn": 80
+    }
+}
