@@ -248,6 +248,15 @@ julia> b' * b
 61
 ```
 
+Element-wise multiplication can also be achieved with `.*` (same is valid for other operators):
+
+```julia-repl
+julia> b .* b
+2-element Vector{Int64}:
+ 25
+ 36
+```
+
 There are a few ways to create equally spaced vectors that might be useful:
 
 ```julia-repl
@@ -376,6 +385,16 @@ For larger functions using the keyword `function` is the way to go; notice below
 julia> function normal(x; mu = 0, sigma = 1)
            return exp(-(x - mu)^2 / (2 * sigma^2)) / sqrt(2pi * sigma)
        end
+normal (generic function with 2 methods)
+
+julia> normal(3)
+0.0044318484119380075
+```
+
+Notice that a better alternative in this case would be to wrap the 3-argument version of `normal` in the key-word interface as follows:
+
+```julia-repl
+julia> normal(x; mu = 0, sigma = 1) = normal(x, mu, sigma)
 normal (generic function with 2 methods)
 
 julia> normal(3)
