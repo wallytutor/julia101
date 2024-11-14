@@ -26,6 +26,7 @@
 ##############################################################################
 
 # Binaries of distributed software.
+/bin/7z*/
 /bin/julia*/
 /bin/VSCode-win32-x64-*/
 

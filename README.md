@@ -80,3 +80,7 @@ After testing the launch of the environment, the following extensions are recomm
 
 - [Julia](https://github.com/julia-vscode/julia-vscode)
 - [Julia Color Themes](https://github.com/CameronBieganek/julia-color-themes)
+
+# Distribution
+
+Download [7-zip](https://7-zip.org/download.html) archive and extract to a directory under [bin/]; check the value of `$zipDir` in [package.ps1](package.ps1) so that the executable is found in path and then run the script from a PowerShell terminal.
