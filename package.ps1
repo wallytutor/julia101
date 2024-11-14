@@ -27,14 +27,17 @@ $filePath  = "$folderPath/julia101-$timeStamp.zip"
 $env:PATH += ";$pwd\bin\$zipDir"
 
 # Compress required files and directories
-7za.exe a -tzip `
-    "$filePath"              `
-    "bin"                    `
-    "media"                  `
-    "src"                    `
-    "code.vbs"               `
-    "julia.bat"              `
-    "README.md"
+7za.exe a -mx=9 -tzip                  `
+    "$filePath"                        `
+    "bin"                              `
+    "media"                            `
+    "src"                              `
+    "code.vbs"                         `
+    "julia.bat"                        `
+    "README.md"                        `
+    -x!"bin/$zipDir"                   `
+    -x!"bin/vscode-data/*"             `
+    -i!"bin/vscode-data/user-data/User/settings.json"
 
 Write-Output "Created distribution at $filePath"
 
