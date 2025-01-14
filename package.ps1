@@ -30,8 +30,6 @@ $env:PATH += ";$pwd\bin\$zipDir"
 7za.exe a -mx=9 -tzip                  `
     "$filePath"                        `
     "bin"                              `
-    "media"                            `
-    "src"                              `
     "code.vbs"                         `
     "julia.bat"                        `
     "README.md"                        `
