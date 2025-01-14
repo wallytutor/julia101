@@ -4,8 +4,8 @@ Redistributable environment for teaching Julia under Windows as provided [here](
 
 ## Build
 
-- Download portable version of [VS Code]()
-- Download portable version of [Julia]
+- Download portable version of [VS Code](https://code.visualstudio.com/download).
+- Download portable version of [Julia](https://julialang.org/downloads/).
 - Extract software under `bin/` to their own directories.
 - Fix versions in [source.bat](bin/source.bat).
 
