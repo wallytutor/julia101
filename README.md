@@ -9,7 +9,7 @@ Redistributable environment for teaching Julia under Windows as provided [here](
 - Extract software under `bin/` to their own directories.
 - Fix versions in [source.bat](bin/source.bat).
 
-If you need packages to be preinstalled, you might which to create a project in a sub-folder with its own `Project.toml` dependencies before packaging.
+If you need packages to be preinstalled, you might need to create a project in a sub-folder with its own `Project.toml` dependencies before packaging.
 
 ## Distribution
 
